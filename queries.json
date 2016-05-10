@@ -1,0 +1,28 @@
+{
+  "name": {
+    "0": "//meta[contains(@itemprop,'author')]/@content",
+    "1": "//div[@class='review review--with-sidebar']//a[@class='user-display-name']",
+    "2": "//li/a[@class='user-display-name']"
+  },
+  "city": {
+    "0": "//div[@class='review review--with-sidebar']//b[contains(.,',')]",
+    "1": "//li/b[contains(.,',')]"
+  },
+  "avatar": {
+    "0": "//img[contains(@src,'60s.jpg') and contains(@src, '/photo/') or contains(@src,'default_avatars')]/@src",
+    "1": "//div[@class='review review--with-sidebar']//div[@class='photo-box pb-60s']//img/@src"
+  },
+  "rating": {
+    "0": "//div[contains(@itemtype, \"http://schema.org/Rating\")]/div/i[contains(@class, 'star-img') and contains(@title, 'star rating')]/img/@alt",
+    "1": "//div[@class='review review--with-sidebar']//meta[@itemprop = 'ratingValue']/@content",
+    "2": "//div[@itemprop='reviewRating']/div/meta[@itemprop='ratingValue']/@content"
+  },
+  "content": {
+    "0": "//div[@class='review review--with-sidebar']//p[@itemprop='description']",
+    "1": "//p[@itemprop='description']"
+  },
+  "date": {
+    "0": "//meta[contains(@itemprop,'datePublished')]/@content",
+    "1": "//div[@class='review review--with-sidebar']//meta[@itemprop='datePublished']/@content"
+  }
+}
