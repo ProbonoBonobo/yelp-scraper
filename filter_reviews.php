@@ -20,12 +20,11 @@ $maxLength = 550;
 $filtered = [];
 $json = json_decode($f,true);
 
-echo $json;
 $ctr = 0;
-echo $ctr;
+
 
 function shortEnough($review) {
-    return (strlen($review) < 550);
+    return (strlen($review) < 750);
 }
 
 function isFiveStars($rating) {
@@ -55,44 +54,44 @@ function build_sorter($key) {
     };
 }
 
-foreach ($json as $value) {
+for ($i = 0; $i < 20; $i++) {
+//foreach ($json as $value) {
 
     // Use $field and $value here
-    echo $value;
 
-    foreach ($json[$ctr] as $field) {
-        getHDAvatar($json[$ctr]['avatar'], $ctr);
-
-        $review = $json[$ctr]['content'];
-        $rating = $json[$ctr]['rating'];
-        $date = $json[$ctr]['date'];
-        $avatar = $json[$ctr]['avatar'];
-        $city = $json[$ctr]['city'];
-        $name = $json[$ctr]['name'];
-        $HDAvatar = getHDAvatar($avatar);
-
-        if (!$review || !$rating || !$date || !$avatar || !$city) {
-            echo "o shit there a problem wit yo shit";
-        }
+//
+//    foreach ($json[$i] as $field) {
 
 
-        if (shortEnough($review) && isFiveStars($rating)) {
-            array_push($filtered, array('date' => $date,
-                'review' => $review,
-                'name' => $name,
-                'avatar' => $avatar,
-                'city' => $city,
-                'HDAvatar' => $HDAvatar));
+    $review = $json[$i]['content'];
+    $rating = $json[$i]['rating'];
+    $date = $json[$i]['date'];
+    $avatar = $json[$i]['avatar'];
+    $city = $json[$i]['city'];
+    $name = $json[$i]['name'];
+    $HDAvatar = getHDAvatar($avatar);
 
-        } else {
-
-        }
-
-        $ctr += 1;
-
+    if (!$review || !$rating || !$date || !$avatar || !$city) {
+        echo "o shit there a problem wit yo shit";
     }
 
+
+    if (shortEnough($review) && isFiveStars($rating)) {
+        array_push($filtered, array('date' => $date,
+            'review' => $review,
+            'name' => $name,
+            'avatar' => $avatar,
+            'city' => $city,
+            'HDAvatar' => $HDAvatar));
+
+    } else {
+
+    }
 }
+
+
+
+
 
 
 usort($filtered, build_sorter('date'));
@@ -101,3 +100,4 @@ $out = fopen('mostrecent.json', 'w');
 fwrite($out, json_encode(array_slice($filtered,0,3), JSON_PRETTY_PRINT));
 fclose($out);
 ?>
+
