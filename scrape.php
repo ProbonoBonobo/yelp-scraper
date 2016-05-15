@@ -22,7 +22,7 @@ foreach ($queryobj as $category => $xpathQueries) {
 
 
 // This is what we're scraping. It's the output location of the wget cronjob. Don't change it.
-$scraped = file_get_contents("./cached/new.html");
+$scraped = file_get_contents("./cached/yelp.html");
 
 
 // instantiate the object model
@@ -30,7 +30,7 @@ if(!empty($scraped)) { //if any html is actually returned
     $DOM = new DOMDocument('1.0', 'UTF-8');
     $DOM->preserveWhiteSpace = true;
     error_reporting(E_ERROR | E_PARSE); // shut up about yelp's non-compliant html
-    $DOM->loadHTMLFile("./cached/new.html"); //reconstitute the DOM from html
+    $DOM->loadHTMLFile("./cached/yelp.html"); //reconstitute the DOM from html
     $DOM->formatOutput = true;
     $DOM->encoding = 'UTF-8';
     $htm = $DOM->saveXML();
