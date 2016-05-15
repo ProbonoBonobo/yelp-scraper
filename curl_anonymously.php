@@ -47,4 +47,4 @@ function curl($URLServer,$proxyRetry, $postdata="", $cookieFile=null, $proxy=tru
     }
 }
 
-curl("http://www.yelp.com/biz/regal-cafe-pizzeria-boston-3",0);
+curl("http://www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego",0);
