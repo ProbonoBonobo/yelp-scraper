@@ -3,7 +3,7 @@ $success = array();
 $fail = array();
 $in=file_get_contents("queries.json");
 $queryobj=json_decode($in);
-
+$json = array();
 // KEYRING is a 2d array with several xpath queries defined for each category that we need to get. Having multiple
 // xpath query definitions makes the scraper less likely to fail, in the event that the target DOM structure changes
 // at some point in the future (and easier to update, should all of the xpath queries for a particular category
@@ -22,7 +22,7 @@ foreach ($queryobj as $category => $xpathQueries) {
 
 
 // This is what we're scraping. It's the output location of the wget cronjob. Don't change it.
-$scraped = file_get_contents("./cached/yelp.html");
+$scraped = file_get_contents("./sandbox/cached/yelp.html");
 
 
 // instantiate the object model
@@ -30,7 +30,7 @@ if(!empty($scraped)) { //if any html is actually returned
     $DOM = new DOMDocument('1.0', 'UTF-8');
     $DOM->preserveWhiteSpace = true;
     error_reporting(E_ERROR | E_PARSE); // shut up about yelp's non-compliant html
-    $DOM->loadHTMLFile("./cached/yelp.html"); //reconstitute the DOM from html
+    $DOM->loadHTMLFile("./sandbox/cached/yelp.html"); //reconstitute the DOM from html
     $DOM->formatOutput = true;
     $DOM->encoding = 'UTF-8';
     $htm = $DOM->saveXML();
