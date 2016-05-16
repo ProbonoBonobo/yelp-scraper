@@ -42,7 +42,7 @@ function curl($URLServer,$proxyRetry, $postdata="", $cookieFile=null, $proxy=tru
         $proxyChosen = 0;
         $myProxy = $proxyCache[$proxyChosen];
         echo "proxy:$myProxy<br>";
-        system("wget -O cached/yelp.html -e use_proxy=yes -e http_proxy=" . $myProxy . " " . $URLServer);
+        system("wget -O sandbox/cached/yelp.html -e use_proxy=yes -e http_proxy=" . $myProxy . " " . $URLServer);
 
     }
 }
