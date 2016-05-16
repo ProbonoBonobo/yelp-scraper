@@ -5,7 +5,9 @@
  * Date: 5/14/16
  * Time: 7:07 PM
  */
-$url = "http://www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego";
+
+error_reporting(E_ERROR | E_PARSE);
+$url = "www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego";
 $attempts = 0;
 $GLOBALS['msg'] = "";
 $goodEnough = false;
@@ -67,7 +69,7 @@ function curl($URLServer,$proxyRetry, $postdata="", $cookieFile=null, $proxy=tru
 //            $c = curl("free-proxy-list.net", "", null, false);
 //            preg_match_all("/([0-9]*).([0-9]*).([0-9]*).([0-9]*):([0-9]*)/", $c, $matches);
 //            $matches = $matches[0];
-            $proxyCache = file_get_contents('/Users/kevinzeidler/rhizome/public/scraper/proxies.txt');
+            $proxyCache = file_get_contents('./proxies.txt');
             $proxyCache = explode(",", $proxyCache);
 //            foreach ($proxyCache as $proxyIP) {
 //                echo $proxyIP;
@@ -113,9 +115,9 @@ if (empty($content)) {
         $GLOBALS['msg']);
     $ts = date_format($date, 'Y-m-d H:i:s' );
     $shorturl = substr($url,11);
-    $shorturl = str_replace("/", "+", $shorturl);
-    $fp = './cached/' . $shorturl . '_'  . $ts . '.html';
-    $location = fopen('./cached/pointer.txt', 'w');
+    $slashesRemoved = str_replace("/", "+", $shorturl);
+    $fp = './sandbox/cached/' . $slashesRemoved . '_'  . $ts . '.html';
+    file_put_contents('./sandbox/cached/fptr.txt', $fp);
     // we're going to do a sanity check on that before we use it. but in order to do that, we need the filename.
     // write it to a .txt file.
     fwrite($location, $fp);
