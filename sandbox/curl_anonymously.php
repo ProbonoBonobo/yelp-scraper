@@ -7,7 +7,7 @@
  */
 
 error_reporting(E_ERROR | E_PARSE);
-$url = "www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego";
+$url = "http://www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego";
 $attempts = 0;
 $GLOBALS['msg'] = "";
 $goodEnough = false;
@@ -69,7 +69,7 @@ function curl($URLServer,$proxyRetry, $postdata="", $cookieFile=null, $proxy=tru
 //            $c = curl("free-proxy-list.net", "", null, false);
 //            preg_match_all("/([0-9]*).([0-9]*).([0-9]*).([0-9]*):([0-9]*)/", $c, $matches);
 //            $matches = $matches[0];
-            $proxyCache = file_get_contents('./proxies.txt');
+            $proxyCache = file_get_contents('./cached/proxies.txt');
             $proxyCache = explode(",", $proxyCache);
 //            foreach ($proxyCache as $proxyIP) {
 //                echo $proxyIP;
