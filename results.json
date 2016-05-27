@@ -24,6 +24,14 @@
         "date": "2016-03-31"
     },
     {
+        "name": "Aron S.",
+        "city": "San Diego, CA",
+        "avatar": "\/\/s3-media4.fl.yelpcdn.com\/photo\/Rl3HP2dizVbqKsJ7jcjoyA\/60s.jpg",
+        "rating": "5.0 star rating",
+        "content": "Great service at a great price. I got hooked up same day, price was competitive for a home visit and everything is now tip top.",
+        "date": "2016-05-25"
+    },
+    {
         "name": "Cynthia B.",
         "city": "Aptos, CA",
         "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/FiJIx50_RZDc9hMIBwTGnQ\/60s.jpg",
@@ -32,12 +40,28 @@
         "date": "2016-03-31"
     },
     {
-        "name": "Mari V.",
+        "name": "Cindy Z.",
         "city": "San Diego, CA",
-        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/assets\/srv0\/yelp_styleguide\/20983a63ea50\/assets\/img\/default_avatars\/user_60_square.png",
+        "avatar": "\/\/s3-media4.fl.yelpcdn.com\/photo\/38w3l0lUESRia6eWYgJYnQ\/60s.jpg",
         "rating": "5.0 star rating",
-        "content": "I dropped my phone on a Friday afternoon and less than 24 hours later you would never know. Jacob was amazing. He answered right away and scheduled my appointment. Jacob is friendly, professional and finished the job \u00a0before my toddler finished his first round at the park. Oh and he also gave me a complimentary screen protector!",
-        "date": "2016-05-14"
+        "content": "It's like I had never dropped my phone! Jacob was super chill and fixed my screen in a matter of minutes. He was also on time and chose to meet me instead of having me come to him. Super convenient for a busy student.",
+        "date": "2016-05-25"
+    },
+    {
+        "name": "Suelen A.",
+        "city": "San Diego, CA",
+        "avatar": "\/\/s3-media4.fl.yelpcdn.com\/photo\/IVhUH2ovF_uXBAiXVpAnAw\/60s.jpg",
+        "rating": "5.0 star rating",
+        "content": "Jacobs showed up quickly, got the job done and was very professional. Great work! I would definitely recommend him to my friends and use his services in the future.",
+        "date": "2016-05-25"
+    },
+    {
+        "name": "Erika A.",
+        "city": "San Diego, CA",
+        "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/Uou6fqJ2D3EH88WhZztEPQ\/60s.jpg",
+        "rating": "5.0 star rating",
+        "content": "They came to my work and fixed my phone the same day. Super nice, fast, highly recommend!",
+        "date": "2016-05-25"
     },
     {
         "name": "Rachel C.",
@@ -48,14 +72,6 @@
         "date": "2016-04-10"
     },
     {
-        "name": "Linda P.",
-        "city": "San Diego, CA",
-        "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/KN4zbFQyvZx0BkN_9M8Qnw\/60s.jpg",
-        "rating": "5.0 star rating",
-        "content": "Two men came to the house, right on time, and quickly replaced my iPhone screen. They were polite and professional. Thank you!",
-        "date": "2016-04-28"
-    },
-    {
         "name": "John H.",
         "city": "San Diego, CA",
         "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/1cbnHUvwdg7F_fYUq-1gQg\/60s.jpg",
@@ -64,11 +80,19 @@
         "date": "2016-03-14"
     },
     {
-        "name": "Rita T.",
-        "city": "Chula Vista, San Diego, CA",
-        "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/9pDu9y4fKFhlyVMTg-oRBQ\/60s.jpg",
+        "name": "Mari V.",
+        "city": "San Diego, CA",
+        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/assets\/srv0\/yelp_styleguide\/20983a63ea50\/assets\/img\/default_avatars\/user_60_square.png",
         "rating": "5.0 star rating",
-        "content": "I cracked my screen about a week ago I been debating to wait until the weekend to get it fixed and then I came across Mobile iRepair of SD. And right away I had an appointment scheduled the next day and they came to my work to repair my screen. Yay. I was amazed of how fast and professional they are. They fixed my phone within 15 minutes came to work. Best customer service ever.Thanks Jacob and Devin. You guys are amazing !!!",
+        "content": "I dropped my phone on a Friday afternoon and less than 24 hours later you would never know. Jacob was amazing. He answered right away and scheduled my appointment. Jacob is friendly, professional and finished the job \u00a0before my toddler finished his first round at the park. Oh and he also gave me a complimentary screen protector!",
+        "date": "2016-05-14"
+    },
+    {
+        "name": "Linda P.",
+        "city": "San Diego, CA",
+        "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/KN4zbFQyvZx0BkN_9M8Qnw\/60s.jpg",
+        "rating": "5.0 star rating",
+        "content": "Two men came to the house, right on time, and quickly replaced my iPhone screen. They were polite and professional. Thank you!",
         "date": "2016-04-28"
     },
     {
@@ -80,28 +104,12 @@
         "date": "2016-04-22"
     },
     {
-        "name": "Patrick N.",
-        "city": "Carmel Valley, San Diego, CA",
-        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/photo\/zAhAPJI0RY6kep8t2FEq0g\/60s.jpg",
+        "name": "Rita T.",
+        "city": "Chula Vista, San Diego, CA",
+        "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/9pDu9y4fKFhlyVMTg-oRBQ\/60s.jpg",
         "rating": "5.0 star rating",
-        "content": "It was during my trip when I dropped my phone and the screen cracked. Luckily I found this service on yelp and gave them a call. I gave them the address to my work place and they were able to come to me to fix my phone. I love how convenient they were and it only took 10 min to have my screen fixed. To fix my iPhone 6 was $110 which is not bad given how great their service was. Highly recommend them.",
-        "date": "2016-04-29"
-    },
-    {
-        "name": "Holly D.",
-        "city": "San Diego, CA",
-        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/photo\/NoyCDBTMVUzYhoDEpul4MA\/60s.jpg",
-        "rating": "5.0 star rating",
-        "content": "I highly recommend these guys! \u00a0I shattered my iPhone 6 screen last night. \u00a0I was researching what to do and originally contacted another company...who didn't pick up their phone or return my email for a few hours. \u00a0I saw Jacob's company on Yelp and he answered my call right away. \u00a0He was very pleasant and and said he could be at my house in an hour. \u00a0He was able to fix my screen right away and couldn't be nicer. \u00a0His prices were in line with other companies but it was great he came to me (no extra charge), was responsive and used Apple parts. \u00a0Thanks!",
-        "date": "2016-05-06"
-    },
-    {
-        "name": "Jeff D.",
-        "city": "La Jolla, CA",
-        "avatar": "\/\/s3-media1.fl.yelpcdn.com\/photo\/v7nwD8evsXiZv_pLPr98iw\/60s.jpg",
-        "rating": "5.0 star rating",
-        "content": "Showed up early and fixed my screen quickly for a fair price! What more can you ask for?",
-        "date": "2016-05-05"
+        "content": "I cracked my screen about a week ago I been debating to wait until the weekend to get it fixed and then I came across Mobile iRepair of SD. And right away I had an appointment scheduled the next day and they came to my work to repair my screen. Yay. I was amazed of how fast and professional they are. They fixed my phone within 15 minutes came to work. Best customer service ever.Thanks Jacob and Devin. You guys are amazing !!!",
+        "date": "2016-04-28"
     },
     {
         "name": "William H.",
@@ -120,12 +128,12 @@
         "date": "2016-03-25"
     },
     {
-        "name": "jay c.",
-        "city": "San Diego, CA",
-        "avatar": "\/\/s3-media2.fl.yelpcdn.com\/photo\/zc9t1Ml43YKPw0lqi4XNeQ\/60s.jpg",
+        "name": "Patrick N.",
+        "city": "Carmel Valley, San Diego, CA",
+        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/photo\/zAhAPJI0RY6kep8t2FEq0g\/60s.jpg",
         "rating": "5.0 star rating",
-        "content": "From the moment I called these guys were on it. I called them, they picked up on the first ring, set a time to come by, and even showed up early, but of course called ahead. Very reliable and great customer service. Wish i broke my phone more often, as these guys run a solid service, and would recommend them to anyone.",
-        "date": "2016-04-20"
+        "content": "It was during my trip when I dropped my phone and the screen cracked. Luckily I found this service on yelp and gave them a call. I gave them the address to my work place and they were able to come to me to fix my phone. I love how convenient they were and it only took 10 min to have my screen fixed. To fix my iPhone 6 was $110 which is not bad given how great their service was. Highly recommend them.",
+        "date": "2016-04-29"
     },
     {
         "name": "Georgia M.",
@@ -136,27 +144,19 @@
         "date": "2016-04-06"
     },
     {
-        "name": "Susan C.",
+        "name": "jay c.",
         "city": "San Diego, CA",
-        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/photo\/tZMx7nkwtgyfkQDLS1Nkmw\/60s.jpg",
+        "avatar": "\/\/s3-media2.fl.yelpcdn.com\/photo\/zc9t1Ml43YKPw0lqi4XNeQ\/60s.jpg",
         "rating": "5.0 star rating",
-        "content": "This is the second time that I have used their service and could not be more pleased. Their prices are reasonable, they come to you and get the job done quickly. I highly recommend them for professional\/friendly service and high quality repairs. They are the type of people that you do not mind having in your home. I would recommend them to anyone looking for a repair.",
-        "date": "2016-04-11"
+        "content": "From the moment I called these guys were on it. I called them, they picked up on the first ring, set a time to come by, and even showed up early, but of course called ahead. Very reliable and great customer service. Wish i broke my phone more often, as these guys run a solid service, and would recommend them to anyone.",
+        "date": "2016-04-20"
     },
     {
-        "name": "Kishore L.",
+        "name": "Holly D.",
         "city": "San Diego, CA",
-        "avatar": "\/\/s3-media2.fl.yelpcdn.com\/photo\/CKjy_nMtsxy0prIq6CfSBQ\/60s.jpg",
+        "avatar": "\/\/s3-media3.fl.yelpcdn.com\/photo\/NoyCDBTMVUzYhoDEpul4MA\/60s.jpg",
         "rating": "5.0 star rating",
-        "content": "While I was looking for someone to fix the broken screen of my wife's iPhone 6plus, I came across numerous options on Yelp. Thanks to the \"Request quote\" feature , I was able to fan out a quote request to multiple vendors. The first response that I got , within a minute , was from Jacob. And none of the others were able to beat the price quoted by JacobThe fact that they offer a mobile repair service was an added bonus considering our unpredictable schedules. Set up an appointment for next day at my workplace. Jacob and Devin showed up a bit earlier in fact They were extremely professional , knowledgable ,got down to work without wasting a second. And replaced the broken screen in a jiffy. Also offered a tempered glass protector for a discount. The phone looked neat and new but I noticed some lines showing up when the screen was black. I just called them again to check if anything was wrong. They absolutely didn't mind coming back and checked once again. I really appreciate the honesty of these guys for I'm sure 9\/10 times I would have gotten a response that it was an existing fault with the phone if I had gone else where to fix the screen. Jacob did admit it was a problem with the screen(albeit the first instance for a 6 plus screen )and instantly replaced with another one without any issuesOn the whole it was a smooth process and would definitely seek out these guys if anything untoward happens to our phones \u00a0in the future",
-        "date": "2016-03-11"
-    },
-    {
-        "name": "Michael R.",
-        "city": "Cardiff, CA",
-        "avatar": "\/\/s3-media4.fl.yelpcdn.com\/photo\/FF2eiNvo20cO9EBrrQ0SLg\/60s.jpg",
-        "rating": "5.0 star rating",
-        "content": "These guys were friendly and efficient with my time and service. I would recommend them all day and frequently for your electronic repair needs!!!! All while I was on lunch so fast and happy to serve you!",
-        "date": "2016-03-21"
+        "content": "I highly recommend these guys! \u00a0I shattered my iPhone 6 screen last night. \u00a0I was researching what to do and originally contacted another company...who didn't pick up their phone or return my email for a few hours. \u00a0I saw Jacob's company on Yelp and he answered my call right away. \u00a0He was very pleasant and and said he could be at my house in an hour. \u00a0He was able to fix my screen right away and couldn't be nicer. \u00a0His prices were in line with other companies but it was great he came to me (no extra charge), was responsive and used Apple parts. \u00a0Thanks!",
+        "date": "2016-05-06"
     }
 ]

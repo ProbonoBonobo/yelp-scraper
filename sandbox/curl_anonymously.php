@@ -8,7 +8,7 @@
 
 error_reporting(E_ERROR | E_PARSE);
 $url = "http://www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego";
-$attempts = 0;
+$attempts= 0;
 $GLOBALS['msg'] = "";
 $goodEnough = false;
 $content = "";
@@ -23,7 +23,10 @@ echo"\nSuccessful. Now attempting to fetch the target HTML";
 
 function getUrl($url,$curl_sess, $proxy_ip) {
     $header = array();
-    $header[0] = "Accept: text/xml,application/xml,application/xhtml+xml, text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5";
+	    
+   $header[0] = "REMOTE_ADDR: $proxy_ip";
+   $header[] = "HTTP_X_FORWARDED_FOR: $proxy_ip";
+   $header[] = "Accept: text/xml,application/xml,application/xhtml+xml, text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5";
     $header[] = "Cache-Control: max-age=0";
     $header[] = "Connection: keep-alive";
     $header[] = "Keep-Alive: 300";
@@ -69,7 +72,7 @@ function curl($URLServer,$proxyRetry, $postdata="", $cookieFile=null, $proxy=tru
 //            $c = curl("free-proxy-list.net", "", null, false);
 //            preg_match_all("/([0-9]*).([0-9]*).([0-9]*).([0-9]*):([0-9]*)/", $c, $matches);
 //            $matches = $matches[0];
-            $proxyCache = file_get_contents('./cached/proxies.txt');
+            $proxyCache = file_get_contents('/cached/proxies.txt');
             $proxyCache = explode(",", $proxyCache);
 //            foreach ($proxyCache as $proxyIP) {
 //                echo $proxyIP;
