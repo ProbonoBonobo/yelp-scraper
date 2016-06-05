@@ -15,7 +15,7 @@
  */
 
 
-$f = file_get_contents('results.json');
+$f = file_get_contents('/var/www/scraper/results.json');
 $maxLength = 550;
 $filtered = [];
 $json = json_decode($f,true);
@@ -24,7 +24,8 @@ $ctr = 0;
 
 
 function shortEnough($review) {
-    return (strlen($review) < 750);
+    return true; // the wireframe now implements scroll overflow, so it's not imperative that we filter out the long reviews
+   //(strlen($review) < 1300);
 }
 
 function isFiveStars($rating) {
@@ -96,7 +97,7 @@ for ($i = 0; $i < 20; $i++) {
 
 usort($filtered, build_sorter('date'));
 
-$out = fopen('mostrecent.json', 'w');
+$out = fopen('/var/www/scraper/mostrecent.json', 'w');
 fwrite($out, json_encode(array_slice($filtered,0,3), JSON_PRETTY_PRINT));
 fclose($out);
 ?>

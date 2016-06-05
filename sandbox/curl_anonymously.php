@@ -72,7 +72,7 @@ function curl($URLServer,$proxyRetry, $postdata="", $cookieFile=null, $proxy=tru
 //            $c = curl("free-proxy-list.net", "", null, false);
 //            preg_match_all("/([0-9]*).([0-9]*).([0-9]*).([0-9]*):([0-9]*)/", $c, $matches);
 //            $matches = $matches[0];
-            $proxyCache = file_get_contents('/cached/proxies.txt');
+            $proxyCache = file_get_contents('/var/www/scraper/sandbox/cached/proxies.txt');
             $proxyCache = explode(",", $proxyCache);
 //            foreach ($proxyCache as $proxyIP) {
 //                echo $proxyIP;
@@ -115,12 +115,12 @@ if (empty($content)) {
         $attempts .
         " attempts. Here's the output: " .
         "\n\n\n===================================== Success Log =====================================\n\n\n" .
-        $GLOBALS['msg']);
+        $content);
     $ts = date_format($date, 'Y-m-d H:i:s' );
     $shorturl = substr($url,11);
     $slashesRemoved = str_replace("/", "+", $shorturl);
-    $fp = './sandbox/cached/' . $slashesRemoved . '_'  . $ts . '.html';
-    file_put_contents('./sandbox/cached/fptr.txt', $fp);
+    $fp = '/var/www/scraper/sandbox/cached/' . $slashesRemoved . '_'  . $ts . '.html';
+    file_put_contents('/var/www/scraper/sandbox/cached/fptr.txt', $fp);
     // we're going to do a sanity check on that before we use it. but in order to do that, we need the filename.
     // write it to a .txt file.
     fwrite($location, $fp);
