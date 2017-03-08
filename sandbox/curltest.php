@@ -7,7 +7,7 @@
  */
 
 error_reporting(E_ERROR | E_PARSE);
-$url = "http://www.yelp.com/biz/mobile-iphone-ipad-screen-repair-san-diego";
+$url = "http://sandiego.craigslist.org/esd/web/5727179855.html";
 $attempts= 0;
 $GLOBALS['msg'] = "";
 $goodEnough = false;
@@ -152,7 +152,7 @@ if (empty($content) || (strlen($content) < 10000) || isCaptchaRoadblock($content
     fclose($location);
 
     // and now write the file to the filename
-    $dest = fopen($fp, 'w');
+    $dest = fopen("./cltest.txt", "w")
     fwrite($dest, $content);
     fclose($dest);
 }
