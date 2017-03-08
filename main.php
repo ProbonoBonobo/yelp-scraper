@@ -7,12 +7,12 @@
  */
 // combine the cronjobs into one
 
-system('php sandbox/extractProxyIPs.php');
+system('php5 /var/www/scraper/sandbox/extractProxyIPs.php');
 sleep(30);
-system('php sandbox/curl_anonymously.php');
+system('php5 /var/www/scraper/sandbox/curl_anonymously.php');
 sleep(30);
-system('php sanitytest.php');
+system('php5 /var/www/scraper/sanitytest.php');
 sleep(30);
-system('php scrape.php');
+system('php5 /var/www/scraper/scrape.php');
 sleep(30);
-system('php filter_reviews.php');
+system('php5 /var/www/scraper/filter_reviews.php');

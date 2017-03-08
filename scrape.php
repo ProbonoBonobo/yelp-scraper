@@ -1,7 +1,7 @@
 <?php
 $success = array();
 $fail = array();
-$in=file_get_contents("queries.json");
+$in=file_get_contents("/var/www/scraper/queries.json");
 $queryobj=json_decode($in);
 $json = array();
 // KEYRING is a 2d array with several xpath queries defined for each category that we need to get. Having multiple
@@ -22,7 +22,7 @@ foreach ($queryobj as $category => $xpathQueries) {
 
 
 // This is what we're scraping. It's the output location of the wget cronjob. Don't change it.
-$scraped = file_get_contents("./sandbox/cached/yelp.html");
+$scraped = file_get_contents("/var/www/scraper/sandbox/cached/yelp.html");
 
 
 // instantiate the object model
@@ -30,7 +30,7 @@ if(!empty($scraped)) { //if any html is actually returned
     $DOM = new DOMDocument('1.0', 'UTF-8');
     $DOM->preserveWhiteSpace = true;
     error_reporting(E_ERROR | E_PARSE); // shut up about yelp's non-compliant html
-    $DOM->loadHTMLFile("./sandbox/cached/yelp.html"); //reconstitute the DOM from html
+    $DOM->loadHTMLFile("/var/www/scraper/sandbox/cached/yelp.html"); //reconstitute the DOM from html
     $DOM->formatOutput = true;
     $DOM->encoding = 'UTF-8';
     $htm = $DOM->saveXML();
@@ -57,7 +57,7 @@ if(!empty($scraped)) { //if any html is actually returned
 
 
 $json = json_encode($json, JSON_PRETTY_PRINT);
-$out = fopen('results.json', 'w');
+$out = fopen('/var/www/scraper/results.json', 'w');
 fwrite($out, $json);
 fclose($out);
 ?>

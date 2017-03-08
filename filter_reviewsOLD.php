@@ -15,17 +15,14 @@
  */
 
 
-$f = file_get_contents('/var/www/scraper/results.json');
-$maxLength = 550;
+$f = file_get_contents('results.json');
 $filtered = [];
 $json = json_decode($f,true);
 
 $ctr = 0;
 
-
 function shortEnough($review) {
-    return true; // the wireframe now implements scroll overflow, so it's not imperative that we filter out the long reviews
-   //(strlen($review) < 1300);
+    return (strlen($review) < 750);
 }
 
 function isFiveStars($rating) {
@@ -55,50 +52,39 @@ function build_sorter($key) {
     };
 }
 
-for ($i = 0; $i < 20; $i++) {
-//foreach ($json as $value) {
+foreach ($json as $value) {
 
     // Use $field and $value here
+    echo $value;
 
-//
-//    foreach ($json[$i] as $field) {
-
-
-    $review = $json[$i]['content'];
-    $rating = $json[$i]['rating'];
-    $date = $json[$i]['date'];
-    $avatar = $json[$i]['avatar'];
-    $city = $json[$i]['city'];
-    $name = $json[$i]['name'];
-    $HDAvatar = getHDAvatar($avatar);
-
-    if (!$review || !$rating || !$date || !$avatar || !$city) {
-        echo "o shit there a problem wit yo shit";
-    }
-
-
-    if (shortEnough($review) && isFiveStars($rating)) {
-        array_push($filtered, array('date' => $date,
-            'review' => $review,
-            'name' => $name,
-            'avatar' => $avatar,
-            'city' => $city,
-            'HDAvatar' => $HDAvatar));
-
-    } else {
+    foreach ($json[$ctr] as $field) {
+        $review = $json[$ctr]['content'];
+        $rating = $json[$ctr]['rating'];
+        $date = $json[$ctr]['date'];
+        $avatar = $json[$ctr]['avatar'];
+        $city = $json[$ctr]['city'];
+        $name = $json[$ctr]['name'];
+        $HDAvatar = getHDAvatar($avatar);
+        if (shortEnough($review) && isFiveStars($rating)) {
+            array_push($filtered, array('date' => $date,
+                'review' => $review,
+                'name' => $name,
+                'avatar' => $avatar,
+                'city' => $city,
+                'HDAvatar' => $HDAvatar));
+        } else {
+             // probably do nothing if the review doesn't satisfy what we're looking for
+        }
+        $ctr += 1;
 
     }
+
 }
-
-
-
-
 
 
 usort($filtered, build_sorter('date'));
 
-$out = fopen('/var/www/scraper/mostrecent.json', 'w');
+$out = fopen('mostrecent.json', 'w');
 fwrite($out, json_encode(array_slice($filtered,0,3), JSON_PRETTY_PRINT));
 fclose($out);
 ?>
-
